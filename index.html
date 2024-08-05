@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>文档标题</title>
+    <style>
+      /* 添加 CSS 样式 */
+      body {
+        background-color: #f1f1f1; /* 修正拼写错误 */
+      }
+
+      #header {
+        text-align: center;
+        padding: 20px; /* 添加内边距 */
+        font-size: 30px;
+      }
+
+      #fruitImage {
+        text-align: center; /* 居中对齐 */
+        margin: 20px 0; /* 添加垂直间距 */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>玄书馆</h1>
+    </div>
+    <div style="text-align: center; margin: 20px">
+      <input type="text" id="searchInput" placeholder="搜索" />
+      <button onclick="searchFruit()">搜索</button>
+    </div>
+    <div id="fruitImage">
+      <!-- 图片初始化为默认值，或者为空 -->
+    </div>
+
+    <script>
+      function searchFruit() {
+        var searchTerm = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        var fruitImage = document.getElementById("fruitImage");
+
+        switch (searchTerm) {
+          case "兰亭序":
+            fruitImage.innerHTML =
+              '<a href="https://img.picgo.net/2024/08/03/lant2a8f3f71213597718.jpg" target="_blank"><img src="https://img.picgo.net/2024/08/03/1ca256c5df522dc1e.th.jpg" alt="兰亭序" width="80" height="100"> <span style="font-size: 20px;">兰亭序</span></a>'; // 使用 <span> 替换 <lanting>
+            break;
+          default:
+            fruitImage.innerHTML = ""; // 清空图片或显示错误信息
+            break;
+        }
+      }
+    </script>
+
+    <div style="text-align: center">
+      <button
+        onclick="location.href=' https://wuchenpeng1.github.io/zidian3/';"
+      >
+        字典
+      </button>
+
+      <button onclick="location.href='https://wuchenpeng1.github.io/zuoping/';">
+        作品
+      </button>
+
+      <button onclick="location.href=' https://wuchenpeng1.github.io/jizi6/';">
+        集字
+      </button>
+    </div>
+  </body>
+</html>
